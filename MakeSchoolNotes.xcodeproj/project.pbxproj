@@ -18,6 +18,8 @@
 		848490D31D68F5610043C60B /* MakeSchoolNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 848490D11D68F5610043C60B /* MakeSchoolNotes.xcdatamodeld */; };
 		A03EDCD31DADF6AB005B209E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03EDCD21DADF6AB005B209E /* Note.swift */; };
 		A03EDCD51DAE0193005B209E /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03EDCD41DAE0193005B209E /* CoreDataHelper.swift */; };
+		A08642C21DAEAD46007EC27B /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08642C11DAEAD46007EC27B /* NavigationController.swift */; };
+		A08642C41DAEADC0007EC27B /* UIColor+chameleonPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08642C31DAEADC0007EC27B /* UIColor+chameleonPalette.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +49,8 @@
 		848490D21D68F5610043C60B /* MakeSchoolNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MakeSchoolNotes.xcdatamodel; sourceTree = "<group>"; };
 		A03EDCD21DADF6AB005B209E /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		A03EDCD41DAE0193005B209E /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		A08642C11DAEAD46007EC27B /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		A08642C31DAEADC0007EC27B /* UIColor+chameleonPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+chameleonPalette.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			children = (
 				2E4A07A81C42F40B007F415F /* ListNotesTableViewController.swift */,
 				2E4A07AA1C42F497007F415F /* DisplayNoteViewController.swift */,
+				A08642C11DAEAD46007EC27B /* NavigationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				2E4A07AE1C42F539007F415F /* Date+convertToString.swift */,
+				A08642C31DAEADC0007EC27B /* UIColor+chameleonPalette.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -212,9 +218,11 @@
 				2E4A07AF1C42F539007F415F /* Date+convertToString.swift in Sources */,
 				A03EDCD51DAE0193005B209E /* CoreDataHelper.swift in Sources */,
 				A03EDCD31DADF6AB005B209E /* Note.swift in Sources */,
+				A08642C21DAEAD46007EC27B /* NavigationController.swift in Sources */,
 				2E4A07AB1C42F497007F415F /* DisplayNoteViewController.swift in Sources */,
 				2E4A07941C42F3B0007F415F /* AppDelegate.swift in Sources */,
 				2E4A07A91C42F40B007F415F /* ListNotesTableViewController.swift in Sources */,
+				A08642C41DAEADC0007EC27B /* UIColor+chameleonPalette.swift in Sources */,
 				848490D31D68F5610043C60B /* MakeSchoolNotes.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

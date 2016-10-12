@@ -34,7 +34,14 @@
                                             <frame key="frameInset" minX="8" minY="37" width="178" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
-                                            <color key="textColor" red="0.56019215416202361" green="0.60742976641414148" blue="0.56866971824117774" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.36470588235294116" green="0.396078431372549" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Truncated Content" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhn-hQ-cwH">
+                                            <frame key="frameInset" minX="194" minY="37" width="173" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.5819218320563706" green="0.63495153743315502" blue="0.58681618908603672" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -42,6 +49,7 @@
                                 <connections>
                                     <outlet property="noteModificationTimeLabel" destination="iNG-2u-vlg" id="bGh-Zt-7DU"/>
                                     <outlet property="noteTitleLabel" destination="GxI-WP-gKG" id="cKh-Uq-ARt"/>
+                                    <outlet property="truncatedContentLabel" destination="jhn-hQ-cwH" id="sI4-Hk-rcW"/>
                                     <segue destination="QQW-tz-u87" kind="show" identifier="displayNote" id="95Y-dg-KjL"/>
                                 </connections>
                             </tableViewCell>
@@ -53,6 +61,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Notes" id="Uy3-uN-8cq">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hLC-dN-k58">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="QQW-tz-u87" kind="show" identifier="addNote" id="Spw-FI-QQ5"/>
                             </connections>
@@ -63,7 +72,7 @@
             </objects>
             <point key="canvasLocation" x="1501.5999999999999" y="266.71664167916043"/>
         </scene>
-        <!--Title-->
+        <!--Display Note View Controller-->
         <scene sceneID="wTF-kI-hLI">
             <objects>
                 <viewController id="QQW-tz-u87" customClass="DisplayNoteViewController" customModule="MakeSchoolNotes" customModuleProvider="target" sceneMemberID="viewController">
@@ -98,13 +107,15 @@
                             <constraint firstItem="bUR-CM-snH" firstAttribute="trailing" secondItem="OP4-38-aHT" secondAttribute="trailingMargin" id="s8c-Oe-Gak"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="UVU-ZF-4s7">
+                    <navigationItem key="navigationItem" id="UVU-ZF-4s7">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="1KR-rO-XKj">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="LSD-2I-V4q" kind="unwind" identifier="Cancel" unwindAction="unwindToListNotesViewController:" id="hbn-1i-0Oc"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="BKS-Hv-T07">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="LSD-2I-V4q" kind="unwind" identifier="Save" unwindAction="unwindToListNotesViewController:" id="Afw-vW-gsz"/>
                             </connections>
@@ -123,7 +134,7 @@
         <!--Navigation Controller-->
         <scene sceneID="7zz-co-Opk">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mDt-gd-JZ9" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mDt-gd-JZ9" customClass="NavigationController" customModule="MakeSchoolNotes" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QPY-dF-6Lx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

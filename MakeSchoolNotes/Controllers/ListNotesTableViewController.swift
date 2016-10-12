@@ -29,11 +29,13 @@ class ListNotesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listNotesTableViewCell", for: indexPath) as! ListNotesTableViewCell
         
-        let row = indexPath.row
-        let note = notes[row]
+        //let row = indexPath.row
+        let noteIndex = (notes.count - 1) - indexPath.row
+        let note = notes[noteIndex]
         
         cell.noteTitleLabel.text = note.title
         cell.noteModificationTimeLabel.text = note.modificationTime?.convertToString()
+        cell.truncatedContentLabel.text = note.content ?? ""
         
         return cell
     }
@@ -44,7 +46,8 @@ class ListNotesTableViewController: UITableViewController {
                 print("Table view cell tapped")
                 
                 let indexPath = tableView.indexPathForSelectedRow!
-                let note = notes[indexPath.row]
+                let noteIndex = (notes.count - 1) - indexPath.row
+                let note = notes[noteIndex]
                 let displayNoteViewController = segue.destination as! DisplayNoteViewController
                 displayNoteViewController.note = note
             }
